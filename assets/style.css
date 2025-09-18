@@ -1,0 +1,127 @@
+/* base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #080808;
+}
+
+/*Fin base */
+
+/* Ubicación general con Grid */
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+/*Fin Ubicación general con Grid */
+
+/* Barra Inicio/Productos/Contacto de navegación con Flexbox */
+nav {
+  background-color: #222;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  justify-content: center;
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+ .nav-links li a:hover {
+  color: #003d80;
+}
+
+/*Fin Barra Inicio/Productos/Contacto de navegación con Flexbox */
+
+/* Main */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+/*Fin Main */
+
+/* Footer */
+.contacto {
+  background-color: #222;
+  padding: 0.5rem;
+  text-align: center;
+  line-height: 1.5;
+  color: white; 
+
+}
+.contacto a {
+  color: #0d77b9;
+  text-decoration: none;
+
+}
+.contacto a:hover {
+  text-decoration: none;
+  color: #08b4f8;
+   
+}
+/*Fin Footer */
+
+/* Grid para catálogo */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  padding: 1rem;
+}
+
+/* Flexbox */
+.card {
+  background-color: rgba(195, 198, 215, 0.488);
+  border-radius: 8px;
+  box-shadow: 0 5px 2px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 50%;
+  
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+.card-info h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+.card-info button {
+  padding: 0.5rem;
+  background-color: #769cc6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.card-info button:hover {
+  background-color:  #003d80;
+  transform: scale(1.5);
+}
